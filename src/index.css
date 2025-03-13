@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, html{
+  box-sizing: border-box;
+  
+}
+
+
+a{
+  position: relative;
+}
+a::after{
+  position: absolute;
+  content: '';
+  background: url('./assets/divider.svg')no-repeat center center;
+  height: 60px;
+  width: 1px;
+  top: -50%;
+  right: -15px;
+}
+a:nth-child(5)::after{
+  display: none;
+}
+.card-contact{
+  position: relative;
+  background: linear-gradient(to right, #EDFDFFBD, #A83BCF, #FA232E);
+  border-radius: 14px;
+  padding: 2px; /* This acts as the border width */
+}
+.card-contact::before{
+  content: '';
+  position: absolute;
+  top: 2px;@import url(https://fonts.googleapis.com/css?family=Iansui:regular);
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 12px; 
+  z-index: -1;
+}
+.card {
+  position: relative;
+  background: linear-gradient(to right, #EDFDFFBD, #A83BCF, #FA232E);
+  border-radius: 14px;
+  padding: 2px; /* This acts as the border width */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 2px;@import url(https://fonts.googleapis.com/css?family=Iansui:regular);
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: white; /* Replace with your card's background color */
+  border-radius: 12px; /* Slightly less than the outer radius to account for the border */
+  z-index: -1;
+}
+
+@theme {
+  --animate-wiggle: wiggle 3s ease-in-out 1 forwards;
+  
+  @keyframes wiggle {
+    0% {
+      transform: translateY(20%);
+    }
+    50% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(-50%); /* Останавливаем на -36% */
+    }
+  }
+}
+
+
+
+
+
